@@ -1,6 +1,6 @@
 # AddInit
 
-Automatically add a constructor for building objects with dict and json to DataType
+Automatically add a constructor for building objects with Dict and JSON String to DataType
 
 ## Usage
 
@@ -43,7 +43,7 @@ end
 B(Dict("a"=>Dict("v"=>1))) == B(A(1))  # true
 ```
 
-## warning
+## Warning
 
 1. Do not use this macro when a single attribute type is String or Dict, which will cause ambiguity.
 2. Type annotation needs to have a constructor with the same name. Abstract types are not available
