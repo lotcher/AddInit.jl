@@ -10,7 +10,7 @@ You can use macro **@add_init** before **struct** definition. Then get a constru
 using AddInit
 
 @add_init struct Test
-	field:AbstractString
+    field:AbstractString
 end
 
 Test("{"field":"a"}") == Test("a")  # true
@@ -21,7 +21,7 @@ It can also cooperate with Base.@kwdef use.
 
 ```julia
 @Base.kwdef struct Test
-	a::Int
+    a::Int
     b::Int=2
     c::Int
 end
@@ -34,10 +34,10 @@ Of course, it also applies to nested objects
 
 ```julia
 @add_init struct A
-	v::Int
+    v::Int
 end 
 @add_init struct B
-	a::A
+    a::A
 end
  
 B(Dict("a"=>Dict("v"=>1))) == B(A(1))  # true
