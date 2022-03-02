@@ -10,7 +10,7 @@ You can use macro **@add_init** before **struct** definition. Then get a constru
 using AddInit
 
 @add_init struct Test
-    field:AbstractString
+    field::AbstractString
 end
 
 Test("{"field":"a"}") == Test("a")  # true
@@ -45,6 +45,6 @@ B(Dict("a"=>Dict("v"=>1))) == B(A(1))  # true
 
 ## Warning
 
-1. Do not use this macro when a single attribute type is String or Dict, which will cause ambiguity.
-2. Type annotation needs to have a constructor with the same name. Abstract types are not available
+1. **Do not use this macro when a single attribute type is String or Dict, which will cause ambiguity.**
+2. **It's best not to use abstract types for type annotation unless you need to assign the original value directly.**
 
